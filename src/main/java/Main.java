@@ -1,9 +1,29 @@
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        experiment1();
+        experiment2();
+    }
+
+    public static void experiment2(){
+        System.out.println(" 안녕하세요");
+
+        PrintStream originOut = System.out;     //백업
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(outputStream);
+
+        System.setOut(printStream);
+
+        System.out.println("하하하");         //이거는 출력 x, 내 저장소(outputStream)에만 존재
+
+        String outStr = outputStream.toString();
+        System.setOut(originOut);
+        printStream.close();
+        System.out.println(outStr);
     }
 
 
