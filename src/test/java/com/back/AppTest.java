@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AppTest {
 
     @Test
-    @DisplayName("")
+    @DisplayName("=== 명언 앱 === 출력")
     void t1(){
 
         Scanner sc = TestUtil.genScanner("종료");
