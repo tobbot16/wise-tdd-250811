@@ -8,6 +8,8 @@ public class Main {
         experiment2();
     }
 
+
+
     public static void experiment2(){
         System.out.println(" 안녕하세요");
 
